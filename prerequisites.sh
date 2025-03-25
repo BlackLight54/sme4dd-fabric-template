@@ -36,6 +36,7 @@ echo "Configuring Docker rootless mode..."
 # The groupadd command may fail if the group already exists. In that case, continue.
 sudo groupadd docker || echo "Group 'docker' already exists. Continuing..."
 sudo usermod -aG docker $USER || { echo "Failed to add user to docker group"; exit 1; }
+sudo chmod 666 /var/run/docker.sock
 echo "Note: For group changes to take effect, please log out and log back in."
 
 echo "Testing Docker installation..."
