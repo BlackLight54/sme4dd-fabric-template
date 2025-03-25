@@ -1,2 +1,2 @@
-fablo-target/
-.vscode
+**/fablo-target/
+fablo-test/
